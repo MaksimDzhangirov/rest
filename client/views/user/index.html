@@ -1,0 +1,34 @@
+<div>
+    <h1>USER CRUD</h1>        
+    <div ng-show="users.length > 0">
+    <a class="btn btn-primary" href="#!/user/create">
+        <i class="glyphicon glyphicon-plus"></i> Create
+    </a>
+    <table class="table table-striped table-hover">
+    <thead>
+    <th>User Name</th>
+    <th>Email</th>
+    <th>Company</th>
+    <th style="width:80px;">Action&nbsp;</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="data in users">
+            <td>{{data.username}}</td>
+            <td>{{data.email}}</td>
+            <td>{{getCompany(data.company_id,companies)}}</td>
+            <td>
+            <a class="btn btn-primary btn-xs" href="/#!/user/update/{{data.id}}">
+                <i class="glyphicon glyphicon-pencil"></i>
+            </a> 
+            <a class="btn btn-danger btn-xs" ng-click="deleteUser(data.id)">
+                <i class="glyphicon glyphicon-trash"></i>
+            </a>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+    <div ng-show="users.length == 0">
+        Empty
+    </div>
+</div>

@@ -1,0 +1,54 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+.bs-callout-update {
+    border-left-color: #aa6708;
+}
+
+.bs-callout-all {
+    border-left-color: #94d7be;
+}
+
+.bs-callout-create {
+    border-left-color: #59abfd;
+}
+
+.bs-callout-delete {
+    border-left-color: #fd8883;
+}
+
+.select2-container {
+  display: block;
+}

@@ -1,0 +1,59 @@
+<div class="jumbotron text-center">
+    <h1>Home Page</h1>
+
+    <p>{{ message }}</p>
+
+</div>
+
+<div class="container">
+    <h2>Users</h2>
+    <div class="bs-callout bs-callout-all">
+        <h4><a href="/#!/user/index">List All Users</a></h4>    
+    </div>
+    <h2>User Operations</h2>
+    <div class="bs-callout bs-callout-create">
+        <h4><a href="/#!/user/create">Create a New User</a></h4>            
+    </div>  
+    <p>You may create your own user using this action. It takes a JSON object containing user's email, name and company id.</p>
+    <div class="bs-callout bs-callout-update">
+        <h4><a href="/#!/user/index">Update User</a></h4>            
+    </div>   
+    <p>You may update user using this action. It takes a JSON object containing user's email, name and company id.</p>  
+    <div class="bs-callout bs-callout-delete">
+        <h4><a href="/#!/user/index">Delete User</a></h4>            
+    </div>     
+    <p>You may delete user using this action.</p>
+
+    <h2>Companies</h2>
+
+    <div class="bs-callout bs-callout-all">
+        <h4><a href="/#!/company/index">List All Companies</a></h4>    
+    </div>
+
+    <h2>Company Operations</h2>
+
+    <div class="bs-callout bs-callout-create">
+        <h4><a href="/#!/company/create">Create a New Company</a></h4>            
+    </div>  
+    <p>You may create your own company using this action. It takes a JSON object containing company's name and quota.</p>
+    <div class="bs-callout bs-callout-update">
+        <h4><a href="/#!/company/index">Update Company</a></h4>            
+    </div>   
+    <p>You may update company using this action. It takes a JSON object containing company's name and quota.</p>  
+    <div class="bs-callout bs-callout-delete">
+        <h4><a href="/#!/company/index">Delete Company</a></h4>            
+    </div>     
+    <p>You may delete company using this action.</p>
+
+    <h2>Report</h2>
+    <div class="bs-callout bs-callout-create">
+        <h4><a href="/#!/report/index">Fetch report</a></h4>            
+    </div> 
+    <p>Generates report for a given month</p>
+
+    <h2>Data</h2>
+    <div class="bs-callout bs-callout-create">
+        <h4><a href="/#!/report/index">Generate data</a></h4>            
+    </div>
+    <p>Generates initial data</p>
+</div>

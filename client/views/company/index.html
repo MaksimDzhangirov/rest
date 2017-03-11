@@ -1,0 +1,32 @@
+<div>
+    <h1>COMPANY CRUD</h1>        
+    <div ng-show="companies.length > 0">
+    <a class="btn btn-primary" href="#!/company/create">
+        <i class="glyphicon glyphicon-plus"></i> Create
+    </a>
+    <table class="table table-striped table-hover">
+    <thead>
+    <th>Company Name</th>
+    <th>Monthly transfer quota</th>
+    <th style="width:80px;">Action&nbsp;</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="data in companies">
+            <td>{{data.company_name}}</td>
+            <td>{{data.monthly_transfer_quota/(1024*1024*1024) | number:2 }} TB</td>
+            <td>
+            <a class="btn btn-primary btn-xs" href="/#!/company/update/{{data.id}}">
+                <i class="glyphicon glyphicon-pencil"></i>
+            </a> 
+            <a class="btn btn-danger btn-xs" ng-click="deleteCompany(data.id)">
+                <i class="glyphicon glyphicon-trash"></i>
+            </a>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+    <div ng-show="companies.length == 0">
+        Empty
+    </div>
+</div>

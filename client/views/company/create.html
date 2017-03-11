@@ -1,0 +1,42 @@
+<div>
+    <h1>COMPANY CRUD</h1>
+    <form role="form" name="myForm" novalidate>
+        <div class= "form-group">
+            <label> Company Name </label>
+            <div>
+                <input name="company_name" ng-model="company.company_name" type= "text" class= "form-control" placeholder="Company Name" required/>
+            </div>
+            <div ng-show="myForm.$submitted || myForm.company_name.$touched">
+                <div class="alert alert-danger" ng-show="myForm.company_name.$error.required">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    Company Name Required.
+                </div>
+            </div>
+            
+        </div>
+        <div class= "form-group" ng-class="{error: myForm.monthly_transfer_quota.$invalid}">
+            <label> Monthly transfer quota in bytes</label>
+            <div>
+                <input name="monthly_transfer_quota" ng-model="company.monthly_transfer_quota" type="text" class="form-control" placeholder="Monthly transfer quota" required integer/>
+                <div ng-show="myForm.$submitted || myForm.monthly_transfer_quota.$touched">
+                    <div class="alert alert-danger" ng-show="myForm.monthly_transfer_quota.$error.required">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error:</span>
+                        Monthly transfer quota Required.
+                    </div>     
+                    <div class="alert alert-danger" ng-show="myForm.monthly_transfer_quota.$error.integer">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error:</span>
+                        The value is not a valid positive integer!
+                    </div>               
+                </div>
+            </div>
+        </div>
+
+        <a href="#!/company/index" class="btn btn-default">Cancel</a>
+        <button ng-click="createCompany(company);"
+                ng-disabled="myForm.$invalid"                   
+                type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>

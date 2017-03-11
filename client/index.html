@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="yii2AngApp">
+<head>  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" href="assets/bower_components/select2/select2.css">
+  <link rel="stylesheet" href="assets/bower_components/select2/select2-bootstrap.css">
+  <link rel="stylesheet" href="assets/css/style.css">  
+</head>
+<body ng-controller="index">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Single page application</a>
+            </div>      
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                <li><a href="/#!/user/index"><i class="glyphicon glyphicon-user"></i> Users</a></li>
+                <li><a href="/#!/company/index"><i class="glyphicon glyphicon-briefcase"></i> Companies</a></li>
+                <li><a href="/#!/report/index"><i class="glyphicon glyphicon-exclamation-sign"></i> Abusers</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="main" class="container"> 
+        <!-- this is where content will be injected -->
+        <div ng-view></div>    
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Based on Yii 2 + AngularJs</p>
+        </div>
+    </footer>
+    <!-- JS -->
+    <script src="assets/bower_components/jquery/dist/jquery.min.js"></script>    
+    <script src="assets/bower_components/angular/angular.min.js"></script>
+    <script src="assets/bower_components/select2/select2.min.js"></script>
+    <script src="assets/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="assets/bower_components/angular-select2/dist/angular-select2.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/site.js"></script>
+    <script src="models/company.js"></script>
+    <script src="models/user.js"></script>
+    <script src="controllers/company.js"></script>
+    <script src="controllers/user.js"></script>
+    <script src="controllers/report.js"></script>
+</body>
+
+</html>

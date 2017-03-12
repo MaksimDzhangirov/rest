@@ -46,7 +46,19 @@ $config = [
             'showScriptName' => false,
             'enableStrictParsing' => true,
             'rules' => [
-                ['class' => 'yii\rest\UrlRule', 'controller' => ['company', 'user', 'transfer']],
+                [
+                    'class' => 'yii\rest\UrlRule', 
+                    'controller' => ['company', 'user'],                
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => ['transfer'],
+                    'extraPatterns' => [
+                        'GET report/<date>' => 'report',
+                        'POST generate' => 'generate',
+                        'GET abusers/<date>' => 'abusers',
+                    ],
+                ]
             ],
         ],
         

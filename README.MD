@@ -10,6 +10,8 @@ Server application is based on Yii 2.0.11.
 
 For navigation between different parts of application use main menu.
 
+DB dump - yii2-ang.sql
+
 Настройка
 =================================================
 
@@ -21,3 +23,5 @@ For navigation between different parts of application use main menu.
 Серварная часть написана на Yii 2.0.11.
 
 Навигация между различными частями приложения осуществляется через главное меню.
+
+Дамп БД - yii2-ang.sql

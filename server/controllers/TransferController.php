@@ -29,7 +29,7 @@ class TransferController extends ActiveController
     {
         $actions = parent::actions();
 
-        // disable the "delete" and "create" actions
+        
         unset($actions['create'], $actions['delete'], $actions['index']);
         unset($actions['update'], $actions['view']);
         
@@ -131,9 +131,8 @@ class TransferController extends ActiveController
         $transfer->user_id = $userID;
         $datetime = $faker->dateTimeBetween($startDate = $startMonth, $endDate = $stopMonth, $timezone = date_default_timezone_get());
         $transfer->date_time = $datetime->getTimestamp();
-        $transfer->resource = $faker->url;
-        $scale = $faker->numberBetween($min = 0, $max = 1000)/1000;
-        $transfer->transferred = ceil(100 + (10*1024*1024*1024 - 100)*$scale);
+        $transfer->resource = $faker->url;        
+        $transfer->transferred = ceil($faker->randomFloat($nbMaxDecimals = NULL, $min = 100, $max = 10*1024*1024*1024));
         $transfer->save();
     }
 
